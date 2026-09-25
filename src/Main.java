@@ -6,12 +6,50 @@ public class Main {
         COSC113 section1 = new COSC113();
         section1.display_course_information();
 
-        // Polymorphism
+        //Polymorphism
         Course cosc214 = new Course();
         Course section2 = new COSC113();
-        // The relationship is: IS-A relationship between course and COSC113
 
         cosc214.display_course_information();
         section2.display_course_information();
+
+        // Student Object
+        Student arturo = new Student();
+        Course math141 = new Course();
+        Course frac = new Course();
+        Course cosc107 = new Course();
+        Course eng102 = new Course();
+        Course soc101 = new Course();
+
+        arturo.enrolledCourses[0] = math141;
+
+        //Lab work: Populate index 1 to 4 with the other course references
+        arturo.enrolledCourses[1] = frac;
+        arturo.enrolledCourses[2] = cosc107;
+        arturo.enrolledCourses[3] = eng102;
+        arturo.enrolledCourses[4] = soc101;
+
+        BSU_Member []members = new BSU_Member[10];
+
+        BSU_Member b1,b2;
+        //Creating an object Student type and storing the reference in a BSu-Member type variable
+        b1 = new Student();
+        b2 = new Instructor();
+
+        members[0] = b1;
+        members[1] = b2;
+
+        System.out.println("================================");
+        for(int j = 2; j<10; j++) {
+            members[j] = new BSU_Member();
+        }
+
+        System.out.println("================================");
+
+        for(int j = 0; j<10; j++) {
+            members[j].display_information();
+        }
+
+
     }
 }

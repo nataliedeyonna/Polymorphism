@@ -1,3 +1,4 @@
+//https://github.com/nataliedeyonna/Polymorphism
 public class Course {
     String name;
     int course_number;
@@ -8,7 +9,7 @@ public class Course {
     // Students
     // Instructor
 
-    Course(){
+    Course() {
         name = "";
         course_number = 0;
         credit = 0;
@@ -20,20 +21,40 @@ public class Course {
         this.name = name;
     }
 
-    // Setters and getters are similar to methods
-    // Methods signature: Access_modifier Return_type Method_name (Param_type Param_name) {}
-    // Return types: void, int, String, boolean, char, array of objects
+    public void set_name(String name) {
+        this.name = name;
+    }
 
-    public void Set_Classroom (String classroom) {
+    public String get_name() {
+        return this.name;
+    }
+
+    public void set_course_number(int course_number) {
+        this.course_number = course_number;
+    }
+
+    public int get_course_number() {
+        return this.course_number;
+    }
+
+    public void set_credit(int credit) {
+        this.credit = credit;
+    }
+
+    public int get_credit() {
+        return this.credit;
+    }
+
+    public void Set_Classroom(String classroom) {
         this.classroom = classroom;
     }
 
-    public String get_Classroom (){
+    public String get_classroom() {
         return this.classroom;
     }
 
-    // Method for displaying attribute values
-    public void display_course_information () {
-        System.out.println("Course name: " + this.name + " Course number: " + this.course_number);
+    public void display_course_information() {
+        System.out.println("Course Name: " + this.name
+                + " Course number: " + this.course_number);
     }
 }
